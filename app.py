@@ -101,4 +101,4 @@ def handle_large_file(error):
     return jsonify({'error': 'File size exceeds the maximum limit. Please upload a smaller file.'}), 413
 
 if __name__ == "__main__":
-    app.run(host = "0.0.0.0", port=5050, debug=True)
+    app.run(host = "0.0.0.0", port=5050, debug=False)
