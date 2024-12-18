@@ -2,3 +2,7 @@
 /__pycache__
 data/cheats.xml
 /utils/__pycache__
+/build
+/uploads
+/logs
+*.log
