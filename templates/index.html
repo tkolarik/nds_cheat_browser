@@ -25,10 +25,20 @@
             <button type="submit" class="btn btn-primary">Upload and Search Cheats</button>
         </form>
 
+        <!-- Display Parsed GameID -->
+        <div id="parsed-gameid" class="mb-4 alert alert-info d-none" role="alert">
+            <!-- GameID will be inserted here -->
+        </div>
+
         <!-- Search Games -->
         <div class="mb-3">
             <label for="game-search" class="form-label">Search Games:</label>
             <input type="text" id="game-search" class="form-control" placeholder="Enter game name or ID">
+        </div>
+
+        <!-- Display Current Game Search Term -->
+        <div id="current-game-search" class="mb-3 alert alert-secondary d-none" role="alert">
+            <!-- Current game search term will be displayed here -->
         </div>
 
         <!-- Search Cheats -->
@@ -37,8 +47,35 @@
             <input type="text" id="cheat-search" class="form-control" placeholder="Enter cheat name, notes, or codes" disabled>
         </div>
 
+        <!-- Display Current Cheat Search Term -->
+        <div id="current-cheat-search" class="mb-4 alert alert-secondary d-none" role="alert">
+            <!-- Current cheat search term will be displayed here -->
+        </div>
+
         <!-- Result Section -->
         <div id="result" class="mt-4"></div>
+    </div>
+
+    <!-- Toast Containers for Feedback -->
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+        <!-- Existing Copy Codes Toast -->
+        <div id="feedback-toast" class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                    Cheat codes copied to clipboard!
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+        <!-- New Copy Name Toast -->
+        <div id="copy-name-toast" class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                    Cheat name copied to clipboard!
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
     </div>
 
     <!-- Bootstrap JS Bundle (includes Popper) -->

@@ -1,4 +1,4 @@
-/* static/css/style.css */
+/* static/css/styles.css */
 
 /* Customize card headers to remove padding */
 .card-header {
@@ -24,4 +24,14 @@ pre {
 .card-header button {
     text-decoration: none;
     color: inherit;
+}
+
+/* Additional styles for display sections */
+#parsed-gameid, #current-game-search, #current-cheat-search {
+    font-size: 1rem;
+}
+
+/* Optional: Add some margin to the copy button */
+.copy-btn {
+    margin-top: 10px;
 }
