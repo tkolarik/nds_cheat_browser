@@ -1,0 +1,27 @@
+/* static/css/style.css */
+
+/* Customize card headers to remove padding */
+.card-header {
+    padding: 0.5rem 1rem;
+}
+
+/* Style for copy button */
+.copy-btn {
+    margin-top: 10px;
+}
+
+/* Preformatted text styling */
+pre {
+    white-space: pre-wrap; /* Allow wrapping */
+    word-wrap: break-word; /* IE support */
+}
+
+/* Optional: Add some spacing and styling for better UX */
+.card-body {
+    padding: 1rem;
+}
+
+.card-header button {
+    text-decoration: none;
+    color: inherit;
+}

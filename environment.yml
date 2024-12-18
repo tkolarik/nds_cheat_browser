@@ -1,0 +1,14 @@
+# environment.yml
+
+name: nds_cheat_browser
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - flask=2.3.2
+  - werkzeug=2.3.4
+  - lxml=4.9.2
+  - pip
+  - pip:
+      - gunicorn  # Optional: For deploying the app (if needed in the future)
