@@ -1,19 +1,28 @@
-# -*- mode: python ; coding: utf-8 -*-
-
-
+# NDS_Cheat_Browser_GUI.spec
 a = Analysis(
     ['gui/cheat_browser.py'],
-    pathex=[],
+    pathex=['.'],
     binaries=[],
-    datas=[],
-    hiddenimports=[],
+    datas=[
+        ('utils', 'utils'),  # Include utils module
+    ],
+    hiddenimports=[
+        'tkinter',
+        'utils',
+        'utils.cheat_utils',
+        'utils.generate_gameid',
+        'utils.header_crc32'
+    ],
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],
     excludes=[],
     noarchive=False,
-    optimize=0,
 )
+
+# Create data directory in the executable
+a.datas += [('data/cheats.xml', '', 'DATA')]
+
 pyz = PYZ(a.pure)
 
 exe = EXE(
